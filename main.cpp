@@ -2,8 +2,8 @@
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 
-#define AIR_QUALITY_THRESHOLD 400  // Ambang batas kualitas udara
-#define TEMP_THRESHOLD 30          // Ambang batas suhu
+#define Kualitas_Udara 400  // Ambang batas kualitas udara
+#define Batas_Suhu 30          // Ambang batas suhu
 
 #define DHTPIN 2                  // Pin data untuk sensor DHT22
 #define DHTTYPE DHT22             // Tipe sensor DHT
@@ -50,7 +50,7 @@ void loop() {
   lcd.print(airQuality);
 
   // Kondisi 1: Alarm jika suhu terlalu tinggi
-  if (temp > TEMP_THRESHOLD) {
+  if (temp > Batas_Suhu) {
     digitalWrite(BUZZER_PIN, HIGH);  // Nyalakan buzzer
     lcd.setCursor(0, 1);  // Pindah ke baris kedua
     lcd.print("Suhu: Tinggi!");
@@ -61,7 +61,7 @@ void loop() {
   }
 
   // Kondisi 2: Alarm jika kualitas udara buruk
-  if (airQuality > AIR_QUALITY_THRESHOLD) {
+  if (airQuality > Kualitas_Udara) {
     digitalWrite(BUZZER_PIN, HIGH);  // Nyalakan buzzer
     lcd.setCursor(0, 3);  // Pindah ke baris keempat
     lcd.print("Kualitas: Buruk");
