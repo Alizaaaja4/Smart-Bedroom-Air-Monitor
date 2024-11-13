@@ -1,7 +1,5 @@
 # Smart-Bedroom-Air-Monitor
 
-<img src="https://github.com/Alizaaaja4/Smart-Bedroom-Air-Monitor/blob/main/dokumentasi.jpg" width="800" height="400" />
-
 **Smart-Bedroom-Air-Monitor** adalah sistem pemantauan kualitas udara dan suhu di kamar tidur berbasis **IoT**. Alat ini menggunakan berbagai sensor untuk mendeteksi kondisi udara dan suhu di dalam ruangan, serta memberikan indikasi melalui LED dan buzzer jika kondisi udara atau suhu berada di luar batas aman. Data kualitas udara dan suhu ditampilkan secara real-time pada **LCD 20x4**.
 
 ### Komponen yang Digunakan:
@@ -12,6 +10,9 @@
 5. **Buzzer**: Memberikan peringatan suara jika kualitas udara atau suhu berada di luar ambang batas yang telah ditentukan.
 6. **Potentiometer (untuk simulasi MQ4)**: Digunakan untuk mensimulasikan pembacaan kualitas udara sebagai input analog.
 7. **Arduino (misalnya, Arduino Uno)**: Sebagai pengendali utama yang memproses data dari sensor dan mengendalikan LED dan buzzer.
+
+### Diagram:
+<img src="https://github.com/Alizaaaja4/Smart-Bedroom-Air-Monitor/blob/main/dokumentasi.jpg" width="800" height="400" />
 
 ### Cara Kerja Alat:
 1. **Pengukuran Suhu dan Kualitas Udara**:
