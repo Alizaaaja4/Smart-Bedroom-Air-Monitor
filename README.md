@@ -12,7 +12,7 @@
 7. **Arduino (misalnya, Arduino Uno)**: Sebagai pengendali utama yang memproses data dari sensor dan mengendalikan LED dan buzzer.
 
 ### Diagram:
-<img src="https://github.com/Alizaaaja4/Smart-Bedroom-Air-Monitor/blob/main/dokumentasi.jpg" width="800" height="400" />
+<img src="https://github.com/Alizaaaja4/Smart-Bedroom-Air-Monitor/blob/main/dokumentasi3.jpg" width="1000" height="400" />
 
 ### Cara Kerja Alat:
 1. **Pengukuran Suhu dan Kualitas Udara**:
