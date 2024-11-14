@@ -8,6 +8,7 @@
 #define DHTPIN 2                  // Pin data untuk sensor DHT22
 #define DHTTYPE DHT22             // Tipe sensor DHT
 #define LED_PIN 13                // Pin untuk LED indikator
+#define LED_SENSOR 7              // Pin untuk LED indikator 2
 #define BUZZER_PIN 12             // Pin untuk Buzzer
 #define POT_PIN A0                // Pin untuk Potentiometer yang digunakan untuk mensimulasikan MQ135
 
@@ -22,6 +23,7 @@ void setup() {
   lcd.backlight();     // Aktifkan lampu latar LCD
 
   pinMode(LED_PIN, OUTPUT);    // Set pin LED sebagai output
+  pinMode(LED_SENSOR, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT); // Set pin buzzer sebagai output
 
   // LED indikator menyala untuk menunjukkan perangkat aktif
@@ -62,11 +64,11 @@ void loop() {
 
   // Kondisi 2: Alarm jika kualitas udara buruk
   if (airQuality > Kualitas_Udara) {
-    digitalWrite(BUZZER_PIN, HIGH);  // Nyalakan buzzer
+    digitalWrite(LED_SENSOR, HIGH);   // Nyalakan LED_SENSOR
     lcd.setCursor(0, 3);  // Pindah ke baris keempat
     lcd.print("Kualitas: Buruk");
   } else {
-    digitalWrite(BUZZER_PIN, LOW);   // Matikan buzzer
+    digitalWrite(LED_SENSOR, LOW);    // Matikan LED_SENSOR
     lcd.setCursor(0, 3);  // Pindah ke baris keempat
     lcd.print("Kualitas: Baik");
   }
